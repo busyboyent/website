@@ -9,8 +9,7 @@ var BookingSchema = new Schema(
   	aud :{type: String, required: true},
     status: {type: String, required: true, enum: ['Available','Reserved'], default: 'Available'},
     owner :{type: String, required: true, default: 'undefined'},
-    time :{type: String, required: true, default: 'undefined'},
-    number :{type: String, required: true, default: 'undefined'}
+    time :{type: String, required: true, default: 'undefined'}
   }
 );
 

@@ -22,7 +22,7 @@ exports.booking_detail = function(req, res, next) {
           err.status = 404;
           return next(err);
         }
-      res.render('booking_detail', { title: 'Бронирование: аудитории № ' + booking.aud, booking:  booking});
+      res.render('booking_detail', { title: 'Бронирование аудитории № ' + booking.aud, booking:  booking});
     })
 };
 
@@ -31,7 +31,6 @@ exports.booking_detail_post  = [
     body('aud', 'Неправильное подтверждение аудитории').trim().isLength({ min: 0, max : 633 }).escape(),
 	  body('owner', 'Вы должны указать свое имя.').trim().isLength({ min: 3 }).escape(),
     body('time', 'Неправильно указано время бронирования.').trim().isLength({ min: 1, max : 2 }).matches(/\d/).escape(),
-    body('number', 'Неправильно указан контактный номер.').trim().isLength({ min: 8, max: 12 }).matches(/\d/).escape(),
     
     (req, res, next) => {
     	const errors = validationResult(req);
@@ -42,7 +41,6 @@ exports.booking_detail_post  = [
           status: 'Reserved',
           owner: req.body.owner,
           time: req.body.time,
-          number : req.body.number,
           _id:req.params.id
     	})
 
