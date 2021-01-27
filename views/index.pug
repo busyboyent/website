@@ -1,0 +1,28 @@
+extends layout
+
+block content
+  if error
+    p Error getting dynamic content.
+  else
+    ul
+      li #[strong Свободные аудитории:] !{data.booking_available_count}
+
+    section(class="info")
+            img(src="images/banner.png", alt="sale 40 points off before the deadline")
+
+
+    section(class="project")
+         
+        div(class="content")
+            div(class="card no-top-padding")
+                form(target="_blank", action="/mainpage/contacts")
+                    button(class="card-image teacher")
+           
+            div(class="card no-right-margin no-top-padding")
+                form(target="_blank", action="/mainpage/booking")
+                    button(class="card-image booking")
+
+    section(class="end-main")
+        button(class="button-number")
+            a(href="tel:+73433899467", style="color: black", target="_blank") Деканат
+        p(class="author") &#169; Матушкин Никита КН-303

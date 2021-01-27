@@ -1,0 +1,33 @@
+extends layout
+
+block content
+  h1=title
+
+  form(method='POST' action='')
+    if booking.status=='Available'
+        div.form-group
+          label(for='aud') Аудитория:
+          input#aud.form-control(type='text', placeholder='Введите слово N аудитория' , readonly class="form-control-plaintext", name='aud', required='true' value=(booking.aud) )
+        div.form-group
+          label(for='owner') Ваше Имя:
+          input#owner.form-control(type='text', placeholder='Введите имя' name='owner' required='true' value=(undefined) )
+        div.form-group
+          label(for='time') Укажите на какое время хотите сделать заказ(введите целое кол-во часов от 0 до 24):
+          input#time.form-control(type='text', placeholder='Введите время заказа' name='time' required='true' value=(undefined) )
+        div.form-group
+          label(for='number') Укажите контактный сотовый номер(11 цифр без доп знаков):
+          input#number.form-control(type='text', placeholder='Введите сотовый номер' name='number' required='true' value=(undefined) )
+    
+        button.btn.btn-primary(type='submit') Забронировать
+    else
+       span.text-warning Извините, но столик уже забронирован
+
+  if errors
+    ul
+      for error in errors
+        li!= error.msg
+
+  section(class="end")
+    button(class="button-number")
+      a(href="tel:+73433899467", style="color: black", target="_blank") Деканат
+    p(class="author") &#169; Матушкин Никита КН-303

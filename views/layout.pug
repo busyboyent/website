@@ -1,0 +1,36 @@
+doctype html
+html(lang='en')
+    head
+        meta(charset='utf-8')
+        meta(name='author,' content='Matushkin Nikita')
+        meta(name='description', content='This is website for WEB and DHTML course')
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+        title Math Mech Mess
+        link(href='stylesheets/style.css', rel='stylesheet')
+        link(rel='preconnect', href='https://fonts.gstatic.com')
+        link(href='https://fonts.googleapis.com/css2?family=Roboto&display=swap', rel='stylesheet')
+        link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css', integrity='sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z', crossorigin='anonymous')
+        script(src='https://code.jquery.com/jquery-3.5.1.slim.min.js', integrity='sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj', crossorigin='anonymous')
+        script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js', integrity='sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV', crossorigin='anonymous')
+        link(rel="stylesheet", href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css", integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z", crossorigin="anonymous")
+        script(src="https://code.jquery.com/jquery-3.5.1.slim.min.js", integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj", crossorigin="anonymous")
+        script(src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js", integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV", crossorigin="anonymous")
+        link(rel='stylesheet', href='/stylesheets/style.css')
+    body
+        header(class='header', id='header-top')
+            div(class='header-menu')
+                div(class='logo')
+                    a(href='/mainpage')
+                        img(src='images/logo.png', alt='Math Mech Mess logo')
+                div(class='geolink')
+                    a(href='https://yandex.ru/maps/54/yekaterinburg/house/ulitsa_turgeneva_4/YkkYcAZkQEEAQFtsfXR1cHpkYQ==/?ll=60.614947%2C56.841675&source=wizgeo&utm_medium=maps-desktop&utm_source=serp&z=16', class='geo', target='_blank')
+                        img(class='geopng', src='images/geo.png')
+                        span Екатеринбург
+                ul(class='header-menu__list')
+                    li(class='header-menu__item')
+                        a(class='link link--with-icon', href='/mainpage/contacts') Контакты
+                    li(class='header-menu__item')
+                        a(class='link link--with-icon booking-border', href='/mainpage/booking') Бронировать
+
+        div(class='col-xm-10')
+          block content

@@ -1,0 +1,23 @@
+extends layout
+
+block content
+  h1 Аудитории
+
+  ul
+    each val in booking_list
+      li
+        a(href=val.url) #{val.aud}
+        if val.status=='Available'
+          span.text-success (#{val.status})
+        else
+          span.text-warning (#{val.status})
+        if val.status!='Available'
+          span  (Заказан на: #{val.time}:00 )
+
+    else
+      li Нет свободных аудиторий.
+
+  section(class="end")
+      button(class="button-number")
+          a(href="tel:+73433899467", style="color: black", target="_blank") Деканат
+      p(class="author") &#169; Матушкин Никита КН-303
