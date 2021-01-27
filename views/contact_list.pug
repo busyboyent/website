@@ -1,20 +1,22 @@
 extends layout
 
 block content
-  h1 Контакты
+  h1 Контакты:
 
-  ul
+  ul(class="contactt")
     each contact in contact_list
       ul(class="contact")
-        li
-          div(class= contact.picture)
-          #{contact.name}
-          |  (#{contact.cont})
+        li(class='cardd carddd-image')
+          a(href=contact.cont)
+            div(class= contact.picture)
+          a(href=contact.cont)
+            #{contact.name}
+            |  (#{contact.cont})
 
     else
       li Нет контактов.
 
-  section(class="end")
+  section(class="end-main")
     button(class="button-number")
       a(href="tel:+73433899467", style="color: black", target="_blank") Деканат
     p(class="author") &#169; Матушкин Никита КН-303

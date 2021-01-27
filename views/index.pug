@@ -7,8 +7,15 @@ block content
     ul
       li #[strong Свободные аудитории:] !{data.booking_available_count}
 
-    section(class="info")
-            img(src="images/banner.png", alt="sale 40 points off before the deadline")
+    .wrapper.info
+      input#slide1(type='radio', name='point', checked='')
+      input#slide2(type='radio', name='point')
+      .slider
+        .slides.slide1
+        .slides.slide2
+      .controls
+        label(for='slide1')
+        label(for='slide2')
 
 
     section(class="project")

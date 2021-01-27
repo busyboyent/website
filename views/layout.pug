@@ -18,18 +18,18 @@ html(lang='en')
         link(rel='stylesheet', href='/stylesheets/style.css')
     body
         header(class='header', id='header-top')
-            div(class='header-menu')
+          div(class='header-menu')
                 div(class='logo')
-                    a(href='/mainpage')
-                        img(src='images/logo.png', alt='Math Mech Mess logo')
-                div(class='geolink')
-                    a(href='https://yandex.ru/maps/54/yekaterinburg/house/ulitsa_turgeneva_4/YkkYcAZkQEEAQFtsfXR1cHpkYQ==/?ll=60.614947%2C56.841675&source=wizgeo&utm_medium=maps-desktop&utm_source=serp&z=16', class='geo', target='_blank')
-                        img(class='geopng', src='images/geo.png')
+                    a(href='/mainpage', class="header-menu__lista")
+                        img(src='../images/logo.png', alt='Math Mech Mess logo')
+                div.geolink
+                    a(href='https://yandex.ru/maps/54/yekaterinburg/house/ulitsa_turgeneva_4/YkkYcAZkQEEAQFtsfXR1cHpkYQ==/?ll=60.614947%2C56.841675&source=wizgeo&utm_medium=maps-desktop&utm_source=serp&z=16', class='geo header-menu__lista', target='_blank')
+                        img(class='geopng', src='../images/geo.png')
                         span Екатеринбург
-                ul(class='header-menu__list')
-                    li(class='header-menu__item')
-                        a(class='link link--with-icon', href='/mainpage/contacts') Контакты
-                    li(class='header-menu__item')
+                ul.header-menu__list.header-menuul
+                    li(class='header-menu__item li')
+                        a(class='link link--with-icon header-menu__lista', href='/mainpage/contacts') Контакты
+                    li(class='header-menu__item li')
                         a(class='link link--with-icon booking-border', href='/mainpage/booking') Бронировать
 
         div(class='col-xm-10')
